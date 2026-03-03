@@ -1,0 +1,41 @@
+{
+  "name": "@RtS/web-components",
+  "version": "0.1.0",
+  "description": "UI библиотека на Web Components (vanilla JS)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./auto": {
+      "import": "./dist/auto.js",
+      "types": "./dist/define/auto.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:js": "vite build",
+    "build:types": "tsc -p tsconfig.json",
+    "build": "npm run build:js && npm run build:types",
+    "prepare": "npm run build",
+    "dev:playground": "npm run build && npx serve playground"
+  },
+  "keywords": [
+    "web-components",
+    "ui-library",
+    "custom-elements"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}

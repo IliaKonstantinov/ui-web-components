@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>web-components playground</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module">
+      import { UiButton } from '../dist/index.js';
+
+      const root = document.getElementById('root');
+
+      root.appendChild(UiButton);
+    </script>
+  </body>
+</html>
